@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('student_profiles', function (Blueprint $table) {
+        Schema::create('residents', function (Blueprint $table) {
         
         $table->id();
         $table->string('Res_ID');
@@ -22,6 +22,7 @@ return new class extends Migration
         $table->string('Res_Mobile')->unique();
         $table->string('Res_Ic')->unique();
         $table->integer('Res_HouseNo');
+        $table->string('Res_Address');
         $table->string('Password');
         $table->timestamps();
         });
